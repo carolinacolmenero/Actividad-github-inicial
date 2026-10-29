@@ -1,14 +1,5 @@
 import java.util.Scanner;
-<<<<<<< HEAD
- 
- 
 public class App {
- 
- 
-=======
-
-public class App {
->>>>>>> 925664b60e058f4cdd219d1534ee97922d397017
     public static void main(String[] args) {
         // Hacer un bucle que le pida al usuario dos números y una operación
         // (sumar, restar, multiplicar, dividir)
@@ -16,56 +7,22 @@ public class App {
         // (1. Sumar / 2. Restar / 3. Multiplicar / 4.Dividir)
         // Muestra por pantalla el resultado
         // Vuelve al comienzo del bucle
-<<<<<<< HEAD
- 
- 
         // Ejemplo para llamar a una función:
         // System.out.println("Resultado: " + sumar(primerNumero, segundoNumero));
        
     }
  
- 
     public static double sumar(double primerNumero, double segundoNumero) {
         return primerNumero + segundoNumero;
     }
  
- 
     public static double restar(double primerNumero, double segundoNumero) {
         return primerNumero - segundoNumero;
     }
-    
- 
- 
-    public static double multiplicar(double primerNumero, double segundoNumero) {
-        //
-    }
- 
- 
-    public static double dividir(double primerNumero, double segundoNumero) {
-        //
-=======
-
-
-        // Ejemplo para llamar a una función:
-        // System.out.println("Resultado: " + sumar(primerNumero, segundoNumero));
-
-    }
-
-
-    public static double sumar(double primerNumero, double segundoNumero) {
-        //
-    }
-
-
-    public static double restar(double primerNumero, double segundoNumero) {
-        //
-    }
-
 
     public static double multiplicar(double primerNumero, double segundoNumero) {
         return primerNumero * segundoNumero;
     }
-
 
     public static double dividir(double primerNumero, double segundoNumero) {
         if (segundoNumero == 0) {
@@ -73,7 +30,5 @@ public class App {
             return 0;
         }
         return primerNumero / segundoNumero;
->>>>>>> 925664b60e058f4cdd219d1534ee97922d397017
     }
 }
-
