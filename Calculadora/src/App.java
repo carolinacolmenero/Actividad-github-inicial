@@ -1,36 +1,67 @@
 
 import java.util.Scanner;
- 
-public class App {
- 
- 
-    public static void main(String[] args) {
-        // Hacer un bucle que le pida al usuario dos números y una operación
-        // (sumar, restar, multiplicar, dividir)
-        // podéis hacerlo ofreciendo opciones numéricas 
-        // (1. Sumar / 2. Restar / 3. Multiplicar / 4.Dividir)
-        // Muestra por pantalla el resultado
-        // Vuelve al comienzo del bucle
- 
 
-        // Ejemplo para llamar a una función:
-        // System.out.println("Resultado: " + sumar(primerNumero, segundoNumero));
+public class App {
+
+    public static double sumar(double primerNumero, double segundoNumero) {
+        return primerNumero + segundoNumero;
+    }
+
+    public static double restar(double primerNumero, double segundoNumero) {
+        return primerNumero - segundoNumero;
+    }
+
+    public static double multiplicar(double primerNumero, double segundoNumero) {
+        return primerNumero * segundoNumero;
+    }
+
+    public static double dividir(double primerNumero, double segundoNumero) {
+        if (segundoNumero == 0) {
+            System.out.println("No se puede dividir entre cero.");
+            return 0;
+        }
+        return primerNumero / segundoNumero;
+    }
+
+    public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
         int primerNumero, segundoNumero;
-        boolean bucle = true;
+        String opcion = "";
 
-        while(bucle == true){
-            System.out.println("Introduce el primer número: ");
-            primerNumero = sc.nextInt();
+        System.out.println("Introduce el primer número: ");
+        primerNumero = sc.nextInt();
 
-            System.out.println("Introduce el segundo número: ");
-            segundoNumero = sc.nextInt();
+        System.out.println("Introduce el segundo número: ");
+        segundoNumero = sc.nextInt();
 
-            
-        }
+        System.out.println("**CALCULADORA**");
+        System.out.println("Elige el calculo que deseas realizar: ");
+        System.out.println("- Sumar");
+        System.out.println("- Restar");
+        System.out.println("- Multiplicar");
+        System.out.println("- Dividir");
         
+        opcion = sc.next();
+        opcion = opcion.toLowerCase();
+        switch (opcion) {
+            case "sumar":
+                System.out.println(sumar(primerNumero, segundoNumero));
+                break;
+            case "restar":
+                System.out.println(restar(primerNumero, segundoNumero));
+                break;
+            case "multiplicar":
+                System.out.println(multiplicar(primerNumero, segundoNumero));
+                break;
+            case "dividir":
+               System.out.println(dividir(primerNumero, segundoNumero));
+                break;
+            default:
+                System.out.println("Operación no válida");
+        }
+
+        sc.close();
+
     }
- 
 }
- 
